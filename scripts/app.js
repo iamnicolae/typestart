@@ -1,7 +1,7 @@
 import { WORDS } from "./src/words.js";
 import { counter } from "./src/counter.js";
 import { startCountdown } from "./src/startCountdown.js";
-import { input, currentWord } from "./utils/querySelectors.js";
+import { input, currentWord, pastWords } from "./utils/querySelectors.js";
 import { languageDropdown } from "./src/components/languageDropdown.js";
 import { time } from "./src/time.js";
 
@@ -32,6 +32,7 @@ import { time } from "./src/time.js";
         input.value = "";
         //add a second tontheir time
         time.set = time.get + 1000;
+        pastWords.append(counter.get !== 1 ? ', ' + WORDS.get[counter.get - 1] : WORDS.get[counter.get - 1])
       }
     }
 
