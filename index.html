@@ -6,36 +6,57 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="./scripts/app.js" type="module" defer></script>
-  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/app.css">
   <title>Typestart</title>
 </head>
 
 <body>
 
-  <header>
-    <span>Typestart</span>
-    <nav>
-      <ul>
-        <li>
-          <a href="">Home</a>
-        </li>
-        <li>
-          <a href="">Your score</a>
-        </li>
-        <li>
-          <a href="">Help</a>
-        </li>
-      </ul>
-    </nav>
-    <button class="button_lang" data-lang="EN">Words - EN</button>
-    <button class="button_lang" data-lang="RO">Words - RO</button>
+  <header class="navigation">
+    <div class="navigation_container">
+      <span class="logo">Typestart</span>
+      <nav>
+        <ul>
+          <!-- <li>
+            <a href="">Home</a>
+          </li> -->
+          <li>
+            <a href="">Help</a>
+          </li>
+          <li>
+            <a href="">Statistics</a>
+          </li>
+          <li>
+            <a href="">Words - EN</a>
+            <!-- <button class="button_lang" data-lang="EN">Words - EN</button>
+        <button class="button_lang" data-lang="RO">Words - RO</button> -->
+          </li>
+        </ul>
+
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <div class="countdown_timer">10:00s</div>
-    <div class="current_word">Type start to begin</div>
+  <section class="type_container">
+    <h1>Round 1</h1>
+    <span class="score">999 points</span>
+    <span class="score">999 wpm</span>
+
+    <header class="type_header">
+      <div class="current_word">Type start to begin</div>
+      <div class="countdown_timer">10:00s</div>
+    </header>
     <input type="text" id="input" placeholder="start">
     <div class="past_words"></div>
+  </section>
+
+
+  <section class="share">
+    <a href="">Share on Twitter</a>
+    <a href="">Share on Facebook</a>
   </section>
 
 </body>
