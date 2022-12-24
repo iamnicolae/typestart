@@ -1,16 +1,17 @@
 import { resetGame } from "./resetGame.js";
 import { setTime } from "../utils/setTime.js";
+import { time } from "./time.js";
 
 export function startCountdown() {
-  let TIME = 10000;
+  //let TIME = 10000;
   const countdown = setInterval(startTimer, 10);
 
   function startTimer() {
-    TIME = TIME - 10;
+    let t = time.get - 10;
+    time.set = t;
+    setTime(t);
 
-    setTime(TIME);
-
-    if (TIME == 0) {
+    if (t == 0) {
       clearInterval(countdown);
       resetGame();
     }

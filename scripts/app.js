@@ -3,6 +3,7 @@ import { counter } from "./src/counter.js";
 import { startCountdown } from "./src/startCountdown.js";
 import { input, currentWord } from "./utils/querySelectors.js";
 import { languageDropdown } from "./src/components/languageDropdown.js";
+import { time } from "./src/time.js";
 
 (() => {
 
@@ -29,6 +30,8 @@ import { languageDropdown } from "./src/components/languageDropdown.js";
         counter.set = counter.get + 1;
         currentWord.textContent = WORDS.get[counter.get];
         input.value = "";
+        //add a second tontheir time
+        time.set = time.get + 1000;
       }
     }
 
