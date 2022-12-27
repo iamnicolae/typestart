@@ -15,7 +15,6 @@ import { time } from "./src/time.js";
   //fr
   //es
   //it
-  //pl
 
   input.addEventListener('input', (event) => {
 

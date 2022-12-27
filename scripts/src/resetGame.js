@@ -6,6 +6,6 @@ export function resetGame() {
   counter.set = 0;
   WORDS.set = WORDS.get;
   countdownTimer.innerHTML = "10:00s";
-  currentWord.textContent = "Type start to begin";
+  currentWord.innerHTML = "<span class=\"type_gameover\">Game over.</span> Type <span class=\"type_start\">start</span> to begin";
   input.value = "";
 }

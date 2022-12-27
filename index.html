@@ -31,8 +31,8 @@
           </li>
           <li>
             <a href="">Words - EN</a>
-            <!-- <button class="button_lang" data-lang="EN">Words - EN</button>
-        <button class="button_lang" data-lang="RO">Words - RO</button> -->
+            <button class="button_lang" data-lang="EN">Words - EN</button>
+            <button class="button_lang" data-lang="RO">Words - RO</button>
           </li>
         </ul>
 
@@ -41,22 +41,21 @@
   </header>
 
   <section class="type_container">
-    <h1>Round 1</h1>
-    <span class="score">999 points</span>
-    <span class="score">999 wpm</span>
-
     <header class="type_header">
-      <div class="current_word">Type start to begin</div>
+      <div class="current_word">Type <span class="type_start">start</span> to begin</div>
       <div class="countdown_timer">10:00s</div>
     </header>
-    <input type="text" id="input" placeholder="start">
+    <input type="text" id="input" placeholder="start" />
+    <section class="score_container">
+      <span class="score score_points">8 points</span>
+      <span class="score score_wpm">22 wpm</span>
+    </section>
     <div class="past_words"></div>
   </section>
 
-
-  <section class="share">
-    <a href="">Share on Twitter</a>
-    <a href="">Share on Facebook</a>
+  <section class="share_container">
+    <a href="" class="button_share button_share--twitter">Share on Twitter</a>
+    <a href="" class="button_share button_share--facebook">Share on Facebook</a>
   </section>
 
 </body>
