@@ -1,8 +1,9 @@
+import { hasGameStarted } from "./hasGameStarted.js";
 import { dropdown, dropdownList, dropdownCurrent, dropdownArrow } from "./querySelectors.js";
 
 export function toggleDropdown() {
   dropdownCurrent.addEventListener('click', () => {
-    if (dropdownList.style.display === "none") {
+    if (dropdownList.style.display === "none" && !hasGameStarted.get) {
       dropdownList.style.display = "flex";
       dropdownArrow.style.transform = "rotate(180deg)";
     } else {

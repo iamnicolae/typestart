@@ -7,3 +7,5 @@ export const dropdownList = document.querySelector('.dropdown_list');
 export const dropdownCurrent = document.querySelector('.dropdown_current');
 export const dropdownArrow = document.querySelector('.dropdown_arrow');
 export const pastWords = document.querySelector('.past_words');
+export const points = document.querySelector('.points');
+export const wpm = document.querySelector('.wpm');
