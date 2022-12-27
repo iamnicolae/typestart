@@ -16,6 +16,9 @@ import { time } from "./src/time.js";
   //es
   //it
 
+
+
+
   input.addEventListener('input', (event) => {
 
     if (event.target.value === "start") {
@@ -34,9 +37,6 @@ import { time } from "./src/time.js";
         pastWords.append(counter.get !== 1 ? ', ' + WORDS.get[counter.get - 1] : WORDS.get[counter.get - 1])
       }
     }
-
-
-
 
 
   });

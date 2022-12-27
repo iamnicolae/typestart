@@ -20,19 +20,49 @@
       <span class="logo">Typestart</span>
       <nav>
         <ul>
-          <!-- <li>
-            <a href="">Home</a>
-          </li> -->
+          <li>
+            <a href="/">Home</a>
+          </li>
           <li>
             <a href="">Help</a>
           </li>
           <li>
             <a href="">Statistics</a>
           </li>
-          <li>
-            <a href="">Words - EN</a>
-            <button class="button_lang" data-lang="EN">Words - EN</button>
-            <button class="button_lang" data-lang="RO">Words - RO</button>
+          <li class="dropdown">
+            <button class="dropdown_current">
+              <img src="/assets/flags/gb.svg" alt="EN">
+              Words - EN
+            </button>
+            <svg class="dropdown_arrow" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24">
+              <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
+            </svg>
+            <div class="dropdown_list" style="display:none;">
+              <button class="button_lang current_lang" data-lang="EN">
+                <img src="/assets/flags/gb.svg" alt="EN">
+                Words - EN
+              </button>
+              <button class="button_lang" data-lang="RO">
+                <img src="/assets/flags/ro.svg" alt="RO">
+                Words - RO
+              </button>
+              <button class="button_lang" data-lang="DE">
+                <img src="/assets/flags/de.svg" alt="DE">
+                Words - DE
+              </button>
+              <button class="button_lang" data-lang="FR">
+                <img src="/assets/flags/fr.svg" alt="FR">
+                Words - FR
+              </button>
+              <button class="button_lang" data-lang="ES">
+                <img src="/assets/flags/es.svg" alt="ES">
+                Words - ES
+              </button>
+              <button class="button_lang" data-lang="IT">
+                <img src="/assets/flags/it.svg" alt="IT">
+                Words - <span class="lang_code--it">IT</span>
+              </button>
+            </div>
           </li>
         </ul>
 
