@@ -3,7 +3,6 @@ import { setTime } from "../utils/setTime.js";
 import { time } from "./time.js";
 
 export function startCountdown() {
-  //let TIME = 10000;
   const countdown = setInterval(startTimer, 10);
 
   function startTimer() {
