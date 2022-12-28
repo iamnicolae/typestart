@@ -119,6 +119,10 @@ a {
   color: #EB455F;
 }
 
+.type_gamewon {
+  color: #68B984;
+}
+
 #input {
   width: 100%;
   max-width: 500px;
@@ -194,4 +198,11 @@ a {
 .button_share--facebook:hover,
 .button_share--facebook:active {
   color: #1877f2;
+}
+
+
+.statistics_container {
+  width: 100%;
+  max-width: 500px;
+  margin: 150px auto;
 }
