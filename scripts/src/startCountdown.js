@@ -21,7 +21,7 @@ export function startCountdown() {
       currentScore.push({
         points: counter.get,
         wpm: calculateWPM(),
-        lang: currentLang.dataset.lang,
+        lang: document.querySelector('.current_lang').dataset.lang,
         words: pastWords.innerHTML,
         date: new Date()
       });

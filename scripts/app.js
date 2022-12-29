@@ -7,39 +7,11 @@ import { time } from "./src/time.js";
 import { hasGameStarted } from "./utils/hasGameStarted.js";
 import { calculateWPM } from "./utils/calculateWPM.js";
 import { wonGame } from "./src/wonGame.js";
-import { localDB } from "./utils/localDB.js";
+
 
 (() => {
 
   languageDropdown();
-
-  const statistics = localDB.get;
-  let stats = "";
-
-  statistics.forEach(stat => {
-
-    stats += `
-
-    <tr>
-      <td>
-        ${stat.date}
-      </td>
-      <td>
-        ${stat.points} points
-      </td>
-      <td>
-        ${stat.wpm} wpm
-      </td>
-      <td>
-        <img src="/assets/flags/${stat.lang.toLowerCase()}.svg" alt="${stat.lang}">
-        ${stat.words}
-      </td>
-    </tr>
-
-    `
-  });
-
-  document.querySelector('.statistics_table').innerHTML = stats;
 
 
   input.addEventListener('input', (event) => {

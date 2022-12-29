@@ -10,3 +10,5 @@ export const dropdownArrow = document.querySelector('.dropdown_arrow');
 export const pastWords = document.querySelector('.past_words');
 export const points = document.querySelector('.points');
 export const wpm = document.querySelector('.wpm');
+export const statisticsTable = document.querySelector('.statistics_table');
+export const highscoreTable = document.querySelector('.highscore_table');
