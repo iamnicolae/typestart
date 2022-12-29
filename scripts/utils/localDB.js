@@ -1,9 +1,8 @@
 export const localDB = {
-  current: JSON.parse(localStorage.getItem("score") || "[]"),
   get get() {
-    return this.current;
+    return JSON.parse(localStorage.getItem("score") || "[]");
   },
   set set(data) {
-    return this.current = localStorage.setItem('score', JSON.stringify(data));
+    return localStorage.setItem('score', JSON.stringify(data));
   },
 }

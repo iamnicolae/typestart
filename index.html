@@ -5,6 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16161a" />
+  <meta name="description" content="......................................." />
+  <meta property="og:title" content="Typestart" />
+  <meta property="og:url" content="..................................................." />
+  <meta property="og:site_name" content="Typestart">
+  <meta property="og:description" content=".........................................." />
+  <meta property="og:image" content=/assets/images/social.png.................." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/assets/images/favicon.png" />
   <script src="./scripts/app.js" type="module" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +25,7 @@
 <body>
 
   <header class="navigation">
-    <div class="navigation_container">
+    <div class="container navigation_container">
       <span class="logo">Typestart</span>
       <nav>
         <ul>
@@ -70,20 +79,20 @@
     </div>
   </header>
 
-  <section class="type_container">
+  <section class="container type_container">
     <header class="type_header">
       <div class="current_word">Type <span class="type_start">start</span> to begin</div>
       <div class="countdown_timer">10:00s</div>
     </header>
     <input type="text" id="input" placeholder="start" />
-    <section class="score_container">
+    <section class="container score_container">
       <span class="score score_points"><span class="points">0</span> points</span>
       <span class="score score_wpm"><span class="wpm">0</span> wpm</span>
     </section>
     <div class="past_words"></div>
   </section>
 
-  <section class="share_container">
+  <section class="container share_container">
     <a href="" class="button_share button_share--twitter">Share on Twitter</a>
     <a href="" class="button_share button_share--facebook">Share on Facebook</a>
   </section>

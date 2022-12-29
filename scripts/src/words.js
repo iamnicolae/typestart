@@ -1,7 +1,7 @@
 import { WORDS_EN } from "../../data/wordsEN.js";
 import { randomizeArray } from "../utils/randomizeArray.js";
 
-export const WORDS = {
+export const words = {
   current: randomizeArray(WORDS_EN),
   get get() {
     return this.current;

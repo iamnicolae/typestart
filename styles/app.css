@@ -1,3 +1,11 @@
+:root {
+  --font: 'Hanken Grotesk', sans-serif;
+  --color-lightPrimary: #fffffe;
+  --color-lightSecondary: #94a1b2;
+  --color-darkPrimary: #16161a;
+  --color-darkSecondary: #3b3b45;
+}
+
 /* general */
 * {
   margin: 0;
@@ -7,18 +15,18 @@
 
 html {
   font-size: 10px;
-  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: var(--font);
 }
 
 body {
-  background: #16161a;
-  color: #fffffe;
+  background: var(--color-darkPrimary);
+  color: var(--color-lightPrimary);
   font-size: 1.6rem;
 }
 
 a {
   text-decoration: none;
-  color: #94a1b2;
+  color: var(--color-lightSecondary);
 }
 
 .container {
@@ -48,12 +56,9 @@ a {
 
 .navigation {
   width: 100%;
-  /* border-bottom: 1px solid #72757e; */
 }
 
 .navigation_container {
-  width: 100%;
-  max-width: 500px;
   margin: 50px auto;
   padding: 25px 0;
   display: flex;
@@ -76,13 +81,13 @@ a {
 
 .dropdown_current {
   width: 89px;
-  color: #94a1b2;
+  color: var(--color-lightSecondary);
   font-size: 1.4rem;
   cursor: pointer;
 }
 
 .dropdown_arrow {
-  fill: #94a1b2;
+  fill: var(--color-lightSecondary);
 }
 
 .dropdown_list {
@@ -99,9 +104,9 @@ a {
   border: none;
   margin: 0;
   padding: 0;
-  color: #94a1b2;
+  color: var(--color-lightSecondary);
   font-size: 1.4rem;
-  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: var(--font);
   cursor: pointer;
 }
 
@@ -114,12 +119,6 @@ a {
 }
 
 /* type container */
-.type_container {
-  width: 100%;
-  max-width: 500px;
-  margin: 150px auto;
-}
-
 .type_header {
   display: flex;
   justify-content: space-between;
@@ -127,7 +126,7 @@ a {
 }
 
 .type_start {
-  background: #3b3b45;
+  background: var(--color-darkSecondary);
   padding: 1px 5px;
   border-radius: 5px;
   font-size: 1.4rem;
@@ -137,18 +136,14 @@ a {
   color: #EB455F;
 }
 
-.type_gamewon {
-  color: #68B984;
-}
-
 #input {
   width: 100%;
   max-width: 500px;
-  border: 3px solid #3b3b45;
+  border: 3px solid var(--color-darkSecondary);
   background: none;
-  color: #fffffe;
+  color: var(--color-lightPrimary);
   font-size: 2rem;
-  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: var(--font);
   padding: 20px;
   margin: 30px auto 0 auto;
   display: block;
@@ -180,8 +175,6 @@ a {
 
 /* score container */
 .score_container {
-  width: 100%;
-  max-width: 500px;
   margin: 20px auto;
   display: flex;
   justify-content: flex-start;
@@ -246,7 +239,7 @@ a {
 }
 
 .statistics_table tr {
-  border-bottom: 1px solid #3b3b45;
+  border-bottom: 1px solid var(--color-darkSecondary);
 }
 
 .table td {

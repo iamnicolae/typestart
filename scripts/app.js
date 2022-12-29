@@ -1,60 +1,50 @@
-import { WORDS } from "./src/words.js";
+import { words } from "./src/words.js";
 import { counter } from "./src/counter.js";
 import { startCountdown } from "./src/startCountdown.js";
-import { input, currentWord, pastWords, points, wpm } from "./utils/querySelectors.js";
-import { languageDropdown } from "./src/components/languageDropdown.js";
-import { time } from "./src/time.js";
+import { input, currentWord } from "./utils/querySelectors.js";
+import { languageDropdown } from "./src/languageDropdown.js";
 import { hasGameStarted } from "./utils/hasGameStarted.js";
 import { calculateWPM } from "./utils/calculateWPM.js";
-import { wonGame } from "./src/wonGame.js";
-
+import { localDB } from "./utils/localDB.js";
+import { statisticsTable, highscoreTable } from "./utils/querySelectors.js";
+import { fillStatistics } from "./src/fillStatistics.js";
+import { getMaxScore } from "./utils/getMaxScore.js";
+import { setScore } from "./utils/setScore.js";
+import { setPlaceholder } from "./utils/setPlaceholder.js";
+import { setTime } from "./utils/setTime.js";
+import { resetInput } from "./utils/resetInput.js";
 
 (() => {
 
   languageDropdown();
 
+  if (highscoreTable) {
+    const statistics = localDB.get.reverse();
 
-  input.addEventListener('input', (event) => {
+    if (statistics.length > 0) {
+      highscoreTable.innerHTML = fillStatistics(getMaxScore(statistics));
+      statisticsTable.innerHTML = fillStatistics(statistics);
+    }
+  }
 
-    //console.log(time.getTotal)
+  input && input.addEventListener('input', (event) => {
+    const typedWord = event.target.value.toLowerCase();
 
-    // console.log(counter.get)
-
-
-
-    if (event.target.value === "start" && !hasGameStarted.get) {
-      console.log(WORDS.get)
-      startCountdown();
-      currentWord.textContent = WORDS.get[counter.get];
-      input.value = "";
+    if (typedWord === "start" && !hasGameStarted.get) {
       hasGameStarted.set = true;
-      pastWords.innerHTML = "";
-      points.textContent = 0;
-      wpm.textContent = 0;
-
+      startCountdown();
+      resetInput(words.get[counter.get], currentWord);
+      setScore(0, 0, "");
     } else {
-      input.placeholder = `type \"${WORDS.get[counter.get]}\"`;
-      if (WORDS.get[counter.get] === event.target.value) {
+      setPlaceholder(words.get[counter.get], input, currentWord);
+
+      if (words.get[counter.get] === typedWord) {
         counter.set = counter.get + 1;
-        currentWord.textContent = WORDS.get[counter.get];
-        input.value = "";
-        input.placeholder = `type \"${WORDS.get[counter.get]}\"`;
-        //add a second tontheir time
-        time.set = time.get + 1000;
-        time.setTotal = 1000;
-        pastWords.append(counter.get !== 1 ? ', ' + WORDS.get[counter.get - 1] : WORDS.get[counter.get - 1]);
-
-        points.textContent = counter.get;
-        wpm.textContent = calculateWPM();
-
-        // if (WORDS.get[counter.get] === undefined) wonGame();
-
+        resetInput(words.get[counter.get], currentWord);
+        setTime();
+        setScore(counter.get, calculateWPM(), counter.get !== 1 ? ', ' + words.get[counter.get - 1] : words.get[counter.get - 1]);
+        setPlaceholder(words.get[counter.get], input, currentWord);
       }
     }
-
-
   });
-
-
-
 })();
