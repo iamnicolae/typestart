@@ -1,3 +1,3 @@
-![Typestart](assets\images\social.jpg)
+![Typestart](assets/images/social.jpg)
 
 View project: https://typestart.netlify.app/
